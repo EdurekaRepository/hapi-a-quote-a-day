@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 });
 
 var server = new Hapi.Server();
-server.connection({ host:'localhost', port: process.env.PORT || 8080 });
+server.connection({ port: process.env.PORT || 8080 });
 connection.connect();
 
 server.register(require('inert'));
